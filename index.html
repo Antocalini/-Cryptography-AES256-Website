@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Criptografia</title>
+    <!-- CSS FILES -->        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body id="top">
+    <main>
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h1 class="Criptografia text-center">Criptografía AES256</h1>
+                        <h6 id="popup" class="text-center">Encripta un mensaje con el algoritmo AES256</h6>
+                        <div class="custom-form mt-4 pt-2 mb-lg-0 mb-5">
+                            <div class="input-group input-group-lg">
+                                <input id="txtMensaje" type="text" class="form-control" placeholder="    Ingresa un mensaje ...">
+                                <button type="button" onclick="accionar()" class="form-control">Encriptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <div class="d-flex">
+                                <div>
+                                    <h5 class="mb-2">Crea una llave</h5>
+                                    <p class="mb-0">Crea una llave para desencriptar el mensaje.</p>
+                                </div>
+                                <span class="badge bg-design rounded-pill ms-auto">1</span>
+                            </div>
+                            <div id="clave1">
+                                <input id="txtLlave" type="text">
+                                <button id="guardarBtn" type="button" onclick="guardarContraseña()">Guardar</button>
+                            </div>
+                            <img src="images/topics/Clave.png" class="custom-block-image img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="custom-block custom-block-overlay">
+                            <div class="d-flex flex-column h-100">
+                                <img src="images/topics/Encriptado.png" class="custom-block-image img-fluid" alt="">
+                                <div class="custom-block-overlay-text d-flex">
+                                    <div>
+                                        <h5 id="popupMensaje" class="text-white mb-2">Mensaje encriptado</h5>
+                                        <div id="texto">
+                                            <br>
+                                            
+                                            <p id="iv" class="text-white">IV: </p>
+                                            <p id="salt" class="text-white">SALT: </p>
+                                            <p id="MENSAJE" class="text-white">MENSAJE: </p>
+                                        </div>
+                                        
+                                        <button id = "btnDesencriptar" type="button" onclick="accionarDesencriptar()" class="btn custom-btn mt-2 mt-lg-3">Desencriptar</button>
+                                        <button id="btnLimpiar" type="button" onclick="Limpiar()" class="btn custom-btn mt-2 mt-lg-3">Limpiar</button>
+                                    </div>
+                                    <span class=" badge2 badge bg-finance rounded-pill ms-auto">2</span>
+                                </div>
+                                <div class="section-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/algoritmo.js"></script>
+</body>
+</html>
